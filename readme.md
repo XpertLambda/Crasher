@@ -28,7 +28,7 @@ crasher/
 
 ## Installation
 ```bash
-git clone <repository-URL>
+git clone https://github.com/XpertLambda/crasher.git
 cd crasher
 make
 ```
