@@ -4,7 +4,7 @@
 int Random(const char* key,int type, int *Op){
 	printf("\n---------------Random Generator---------------");
 	printf("\nEnter The Length (0 for Unknown) : ");
-	int inp = 0, length;
+	int inp = 0, length = 20;
 	do{
 	printf("\n--> ");
 	scanf("%d",&inp);
@@ -50,10 +50,10 @@ int Random(const char* key,int type, int *Op){
                 }
        count++;
        if(count%300000 == 0){ 
-	       printf("\nGenerated %d Password (%s)",count,word);
+	       printf("\nGenerated %ld Password (%s)",count,word);
        }
        if(result){
-       printf("\nPassword Cracked : %s\n==> After %d tries",word,count);
+       printf("\nPassword Cracked : %s\n==> After %ld tries",word,count);
        exit(0);
        }
 

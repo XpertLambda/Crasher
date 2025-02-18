@@ -20,7 +20,7 @@ int WordList(const char* key, int type) {
     // Process each file in the directory
     while ((entry = readdir(dp))) {
         if (entry->d_type == DT_REG) { // Check if it's a regular file
-            char file_path[256];
+            char file_path[512];
             snprintf(file_path, sizeof(file_path), "%s/%s", dir, entry->d_name);
 
             // Open the file

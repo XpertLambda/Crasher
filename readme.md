@@ -12,18 +12,38 @@ Crasher is a cryptographic toolkit designed for hash decryption and wordlist gen
 ## Project Structure
 ```
 crasher/
-├── crasherSrc/          # Main decryption and hash-cracking module
-│   ├── DeHash/         # Core decryption logic
-│   │   ├── HashTypes/  # Supported hash types (MD5, SHA1, SHA256)
-│   │   ├── Options/    # Attack mode options
-│   ├── Include.h       # Header files
-│   ├── Main.c          # Main execution file
-│   ├── src/            # Additional source files
-├── generatorSrc/       # Wordlist generator module
-│   ├── src/            # Wordlist logic
-│   │   ├── wordlist.c  # Wordlist creation
-│   │   ├── wordlist.h  # Header file for wordlist handling
-│   ├── Makefile        # Build script
+├── crasherSrc/                 # Main decryption and hash-cracking module
+│   ├── src/                    # Source code directory
+│   │   ├── DeHash/             # Core hash-cracking functions
+│   │   │   ├── DeHash.c        # DeHash implementation
+│   │   │   ├── DeHash.h        # DeHash header
+│   │   │   ├── HashTypes/      # Hash algorithm types (e.g., MD5, SHA1)
+│   │   │   │   ├── md5Hash.c   # MD5 hashing implementation
+│   │   │   │   ├── SHA1Hash.c  # SHA1 hashing implementation
+│   │   │   │   └── SHA256Hash.c # SHA256 hashing implementation
+│   │   │   │
+│   │   │   ├── Options/        # Options for cracking techniques
+│   │   │   │   ├── ASCII.c     # ASCII cracking options
+│   │   │   │   ├── Randomlist.c # Random list cracking options
+│   │   │   │   └── Wordlist.c  # Wordlist cracking options
+│   │   │   │
+│   │   ├── Include.h            # Global header file for inclusion
+│   │   ├── Logo/                # Logo display related code
+│   │   │   ├── Logo.c           # Logo display implementation
+│   │   │   └──Logo.h           # Logo header
+│   │   └── Main.c               # Main program entry point
+│   │
+├── generatorSrc/                # Source code for generating wordlists
+│   ├── src/                     # Generator source code
+│   │   ├── main.c               # Main wordlist generation file
+│   │   ├── wordlist.c           # Wordlist creation logic
+│   │   └──wordlist.h           # Wordlist header file
+│
+├── Logo/                        # Logo text file
+│   └── logo.txt                 # Contains the logo in text format
+│
+├── Makefile                     # Build automation file
+└── readme.md                    # Project documentation
 ```
 
 ## Installation
@@ -36,17 +56,13 @@ make
 ## Usage
 ### Hash Decryption
 ```bash
-./crasher <hash> [options]
+./crasher
 ```
-- `<hash>`: The hash to be cracked.
-- `[options]`: Choose attack mode (`--wordlist`, `--ascii`, `--random`).
 
 ### Wordlist Generator
 ```bash
-./generator -o output.txt -l 8
+./generator
 ```
-- `-o output.txt`: Specifies output file.
-- `-l 8`: Sets word length to 8.
 
 ## License
 This project is licensed under **Creative Commons Attribution-NonCommercial (CC BY-NC 4.0)**.
