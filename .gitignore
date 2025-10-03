@@ -1,0 +1,30 @@
+# Build artifacts
+crasher
+crasher_debug
+crasher_prof
+*.o
+*.so
+*.a
+
+# Backup and temporary files
+*~
+*.bak
+*.tmp
+*.swp
+
+# IDE and editor files
+.vscode/
+.idea/
+*.sublime-*
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Log files
+*.log
+
+# Test artifacts (if any are recreated)
+test_*
+benchmark_*
+*_test.txt
