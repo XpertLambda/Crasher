@@ -45,7 +45,6 @@ make
 ### Advanced Build Options
 ```bash
 make            # Optimized release build
-make debug      # Debug build for development
 make clean      # Clean build files
 ```
 
@@ -181,7 +180,9 @@ This tool is designed for legitimate security purposes:
 
 ## License
 
-This project is provided for educational and research purposes. Users must comply with all applicable laws and regulations.
+This project is licensed under the GNU GPL v3.0. See [LICENSE](LICENSE).
+
+This tool is provided for educational and research purposes. Users must comply with all applicable laws and regulations.
 
 ---
 
